@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spacedancer.globalandromathick.PlayActivity">
+
+    <RelativeLayout
+        android:id="@+id/play_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/play_navigation"
+        android:layout_marginBottom="-1dp"
+        android:background="@mipmap/bg">
+
+        <TextView
+            android:id="@+id/play_ModeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/play_TimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/play_QuestionTextView"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/play_QuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/play_ModeTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#19195A"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+
+        <Button
+            android:id="@+id/play_question1_button"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/play_question2_button"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:translationY="15dp" />
+
+        <Button
+            android:id="@+id/play_question2_button"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="15dp"
+            android:translationY="15dp" />
+
+        <Button
+            android:id="@+id/play_question3_button"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/play_question2_button"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:translationY="15dp" />
+
+
+        <TextView
+            android:id="@+id/play_QuestionTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/play_QuestionExpressionTextView"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:translationY="15dp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/play_QuestionExpressionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/play_question1_button"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textColor="#19195A"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:translationY="15dp"
+            android:typeface="sans" />
+
+
+        <TextView
+            android:id="@+id/play_ScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Bodovi: -"
+            android:textColor="#19195A"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/play_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

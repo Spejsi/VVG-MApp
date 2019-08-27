@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.spacedancer.globalandromathick.OptionsActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_bottom_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/options_navigation"
+        android:layout_marginBottom="-1dp"
+        android:background="@mipmap/bg"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/optionsTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Opcije"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="#19195A"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/optionsSpinnerTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionsEngCroRadioGroup"
+            android:gravity="center"
+            android:text="Odaberi zvukove:"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/optionsMinVolumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/options_volumeSeekBar"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="MIN"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/optionsMaxVolumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/options_volumeSeekBar"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="MAX"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/optionsVolumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/options_volumeSeekBar"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="50%"
+            android:textColor="#19195A"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/optionsTestSoundsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/options_sounds_spinner"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="&lt;= testiraj zvuk =&gt;"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:translationY="15dp"
+            android:typeface="sans" />
+
+        <Spinner
+            android:id="@+id/options_sounds_spinner"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionsSpinnerTitleTextView"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/but_bg"
+            android:dropDownWidth="wrap_content"
+            android:dropDownSelector="@android:drawable/editbox_dropdown_dark_frame"
+            android:entries="@android:array/imProtocols"
+            android:spinnerMode="dialog" />
+
+        <ImageView
+            android:id="@+id/optionsCheckSoundYesImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/options_sounds_spinner"
+            android:layout_toRightOf="@id/optionsTestSoundsTitleTextView"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/checkyes" />
+
+        <ImageView
+            android:id="@+id/optionsCheckSoundNoImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/options_sounds_spinner"
+            android:layout_toLeftOf="@id/optionsTestSoundsTitleTextView"
+            android:adjustViewBounds="false"
+            android:background="@android:drawable/checkbox_off_background"
+            android:clickable="true"
+            android:cropToPadding="true"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/checkno" />
+
+        <ImageView
+            android:id="@+id/optionsFlagEngImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignTop="@id/optionsEngCroRadioGroup"
+            android:layout_marginLeft="25dp"
+            android:layout_toLeftOf="@id/optionsEngCroRadioGroup"
+            android:layout_weight="1"
+            android:translationY="5dp"
+            app:srcCompat="@mipmap/lang_eng" />
+
+        <ImageView
+            android:id="@+id/optionsFlagCroImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="24sp"
+            android:layout_alignBottom="@id/optionsEngCroRadioGroup"
+            android:layout_marginLeft="25dp"
+            android:layout_toLeftOf="@id/optionsEngCroRadioGroup"
+            android:layout_weight="1"
+            android:translationY="-5dp"
+            app:srcCompat="@mipmap/lang_cro" />
+
+        <RadioGroup
+            android:id="@+id/optionsEngCroRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionsTitleTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/optionsEngRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="English/Engleski"
+                android:textColor="#19195A"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+
+            <RadioButton
+                android:id="@+id/optionsCroRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Croatian/Hrvatski"
+                android:textColor="#19195A"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/optionsSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/options_volumeSeekBar"
+            android:layout_centerHorizontal="true"
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="Save"
+            android:typeface="serif" />
+
+        <SeekBar
+            android:id="@+id/options_volumeSeekBar"
+            style="@android:style/Widget.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionsCheckSoundYesImageView"
+            android:layout_margin="10dp"
+            android:progressDrawable="@color/bg_register"
+            android:thumb="@mipmap/speaker" />
+
+        <RelativeLayout
+            android:id="@+id/options_bestGameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_register">
+
+
+            <ImageView
+                android:id="@+id/options_best_beginner_imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toLeftOf="@id/options_best_standard_View"
+                app:srcCompat="@mipmap/level_childsplay" />
+
+            <ImageView
+                android:id="@+id/options_best_standard_View"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toLeftOf="@id/options_best_taugh_imageView"
+                app:srcCompat="@mipmap/level_standard" />
+
+            <ImageView
+                android:id="@+id/options_best_taugh_imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@mipmap/level_tough" />
+
+            <TextView
+                android:id="@+id/options_bestGame_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toLeftOf="@id/options_best_beginner_imageView"
+                android:gravity="center_vertical"
+                android:text="Zadnja igra =&gt;"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/options_lastGameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_register"
+            android:translationY="-62dp">
+
+
+            <ImageView
+                android:id="@+id/options_last_beginner_imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@mipmap/level_childsplay" />
+
+            <ImageView
+                android:id="@+id/options_last_standard_View"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/options_last_beginner_imageView"
+                app:srcCompat="@mipmap/level_standard" />
+
+            <ImageView
+                android:id="@+id/options_last_taugh_imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/options_last_standard_View"
+                app:srcCompat="@mipmap/level_tough" />
+
+            <TextView
+                android:id="@+id/options_lastGame_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/options_last_taugh_imageView"
+                android:gravity="center_vertical"
+                android:text="&lt;= Najbolja igra"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:typeface="serif" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/options_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+
+</RelativeLayout>
+

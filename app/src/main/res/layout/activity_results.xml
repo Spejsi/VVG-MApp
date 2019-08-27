@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spacedancer.globalandromathick.ResultsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/results_recycler_view_navigation"
+        android:background="@mipmap/bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionResultsMainTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="ZI"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="#19195A"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/questionResultsPlayerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionResultsMainTitleTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="Igrač:\nTestiranje"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#19195A"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/questionResultsScoresTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionResultsMainTitleTextView"
+            android:layout_centerInParent="true"
+            android:text="Bodova: 25342"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#19195A"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/questionResultsModeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionResultsScoresTextView"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Mod: Početni"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#19195A"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/questionResultsLanguageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionResultsMainTitleTextView"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="Jezik:\nHrvatski"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#19195A"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/activityResultsDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/questionResultsModeTextView"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/results_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/activityResultsDivider2"
+            android:layout_below="@id/activityResultsDivider"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="6dp" />
+
+        <View
+            android:id="@+id/activityResultsDivider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/listDivider"
+            android:translationY="-3dp" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/results_recycler_view_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

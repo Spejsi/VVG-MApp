@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Andromathick global</string>
+    <string name="auth_action_sign_in_short">Registriraj se</string>
+    <string name="auth_email">E-mail adresa</string>
+    <string name="auth_minimum_password">Lozinka je prekratka, upiši najmanje 6 znakova!</string>
+    <string name="auth_auth_failed">Prijava neuspješna, provjeri svoj e-mail i lozinku ili se registriraj</string>
+    <string name="auth_change_email">Promijeni e-mail</string>
+    <string name="auth_change_password">Promijeni lozinku</string>
+    <string name="auth_send_password_reset_email">Pošalji e-mail za poništavanje lozinke</string>
+    <string name="auth_remove_user">Izbriši korisnika</string>
+    <string name="auth_new_pass">Nova lozinka</string>
+    <string name="auth_title_activity_profile">Firebase</string>
+    <string name="auth_title_activity_login">Registracija</string>
+    <string name="auth_hint_email">E-mail</string>
+    <string name="auth_hint_password">Lozinka</string>
+    <string name="auth_hint_name">Puno ime</string>
+    <string name="auth_btn_login">Prijava</string>
+    <string name="auth_btn_link_to_register">Nisi korisnik? Registriraj se sada!</string>
+    <string name="auth_btn_link_to_login">Registriran sam. Prijavi me!</string>
+    <string name="auth_title_activity_reset_password">Poništi lozinku</string>
+    <string name="auth_btn_forgot_password">Zaboravljena lozinka?</string>
+    <string name="auth_btn_reset_password">Poništi lozinku</string>
+    <string name="auth_btn_back">Povratak</string>
+    <string name="auth_hint_new_email">Novi e-mail</string>
+    <string name="auth_btn_change">Promijeni</string>
+    <string name="auth_btn_send">Pošalji</string>
+    <string name="auth_btn_remove">Izbriši</string>
+    <string name="auth_btn_sign_out">Odjavi se</string>
+    <string name="auth_lbl_forgot_password">Zaboravljena lozinka?</string>
+    <string name="auth_prompt_password">Unesi lozinku</string>
+    <string name="auth_forgot_password_msg">Potreban nam je tvoj registracijski mail kako bismo ti poslali upute za poništavanje lozinke.</string>
+    <string name="main_users_account">Korisnički račun</string>
+
+    <string name="leaderboard_highscorestable">Top lista rezultata</string>
+    <string name="leaderboard_ranktitle">Poz.:</string>
+    <string name="leaderboard_nametitle">Ime:</string>
+    <string name="leaderboard_scoretitle">Bodovi:</string>
+
+    <string name="main_beginner_button">Početni mod</string>
+    <string name="main_standard_button">Standardni mod</string>
+    <string name="main_taugh_button">Napredni mod</string>
+    <string name="main_accounts_button">Korisnički račun</string>
+
+    <string name="savings_title">Rezultati igre</string>
+    <string name="savings_leaderboardposition">Pozicija na ljestvici:</string>
+
+    <string name="savings_save">Spremi</string>
+    <string name="savings_hint_name">Upiši ime</string>
+
+    <string name="dialog_close_firstrow">Jeste li sigurni da želite</string>
+    <string name="dialog_close_secondrow">izaći iz igre?</string>
+
+    <string name="dialog_removeuser_firstrow">Da li ste sigurni da želite</string>
+    <string name="dialog_removeuser_secondrow">izbrisati korisnički račun?</string>
+
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/resultsbg"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/questionResultsImageView"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="false"
+                android:padding="4dp"
+                app:srcCompat="@mipmap/checkyes" />
+
+            <TextView
+                android:id="@+id/questionNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="false"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="Pitanje: 13/20"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/questionTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionNumberTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="Izračunaj:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/questionExpressionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTitleTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="3 + 6 = ?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/choicesTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionExpressionTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="Ponuđeni odgovori:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/choice1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/choicesTitleTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="7"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/choice2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/choice1TextView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="9"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/choice3TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/choice2TextView"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/questionResultsImageView"
+                android:text="8"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionResultsImageView"
+                android:layout_alignRight="@id/questionResultsImageView"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:text="Vrijeme: 00.70"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/scoreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timeTextView"
+                android:layout_alignRight="@id/questionResultsImageView"
+                android:layout_marginLeft="5dp"
+                android:text="Bodova: 1730:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/answeredTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scoreTextView"
+                android:layout_alignRight="@id/questionResultsImageView"
+                android:layout_marginLeft="5dp"
+                android:text="Odgovor:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/choiceAnsweredTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/answeredTitleTextView"
+                android:layout_alignLeft="@id/questionResultsImageView"
+                android:layout_alignRight="@id/questionResultsImageView"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="right"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="9"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/questionItemsdivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/choice3TextView"
+                android:background="?android:attr/listDivider" />
+
+
+            <TextView
+                android:id="@+id/solutionTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionItemsdivider"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="Rješenje:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/solutionLine1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/solutionTitleTextView"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="Jednostavnim računanjem"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/solutionLine2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/solutionLine1TextView"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="dolazimo do rezultata"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/solutionLine3TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/solutionLine2TextView"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:text="3 + 6 = 9"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.spacedancer.globalandromathick.OptionsActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_bottom_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/savings_navigation"
+        android:layout_marginBottom="-1dp"
+        android:background="@mipmap/bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/savingsTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/savings_title"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="#19195A"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/savingsModeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savingsTitleTextView"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Mod: -"
+            android:textColor="#19195A"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/savingsScoreTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savingsModeTextView"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/leaderboard_scoretitle"
+            android:textColor="#19195A"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/savingsScoreTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savingsScoreTitleTextView"
+            android:gravity="center"
+            android:text="1234567890"
+            android:textColor="#19195A"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/savingsLeaderboardRankTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savingsScoreTextView"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/savings_leaderboardposition"
+            android:textColor="#19195A"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/savingsLeaderboardRankTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/savingsLeaderboardRankTitleTextView"
+            android:gravity="center"
+            android:text="..."
+            android:textColor="#19195A"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+
+        <Button
+            android:id="@+id/savingsSaveButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="30dp"
+            android:background="@mipmap/but_bg"
+            android:text="@string/savings_save"
+            android:textColor="@android:color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/savingsEnterNameTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/savingsSaveButton"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/bg_register"
+            android:textColorHint="@color/btn_login_bg"
+            android:textStyle="bold|italic">
+
+            <EditText
+                android:id="@+id/savingsEnterNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/savingsEnterNameTextInputLayout"
+                android:layout_alignBottom="@+id/savingsEnterNameTextInputLayout"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZŠĐČĆŽabcdefghijklmnopqrstuvwxyzšđčćž0123456789 _-"
+                android:fadingEdge="vertical"
+                android:hint="@string/savings_hint_name"
+                android:scrollbarDefaultDelayBeforeFade="@android:integer/status_bar_notification_info_maxnum"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/savings_progressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/savings_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>
